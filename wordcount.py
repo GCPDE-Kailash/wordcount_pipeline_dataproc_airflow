@@ -3,7 +3,7 @@ from pyspark.sql.functions import explode, split, lower, col, length
 
 spark = SparkSession.builder.appName("WordCount").getOrCreate()
 
-input_path = "gs://airflow-wordcount-bucket/input/readme.md"
+input_path = "gs://airflow-wordcount-bucket/input/input.md"
 output_path = "gs://airflow-wordcount-bucket/output/fixed_wordcount_result"
 
 # Read and clean text
