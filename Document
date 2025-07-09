@@ -70,14 +70,14 @@ Build a production-grade, fully automated data pipeline on Google Cloud Platform
 ## 📂 4. Prepare Your Files and Folders
 
 * **wordcount.py** (PySpark Script)
-* **readme.md** (Text file with sample data)
+* **input.md** (Text file with sample data)
 * **wordcount\_dag.py** (Airflow DAG)
 
 **Upload to GCS**:
 
 ```bash
 gsutil cp wordcount.py gs://airflow-wordcount-bucket/scripts/
-gsutil cp readme.md gs://airflow-wordcount-bucket/input/
+gsutil cp input.md gs://airflow-wordcount-bucket/input/
 ```
 
 **Upload DAG to Composer DAG folder**:
@@ -159,7 +159,7 @@ Trigger DAG from Airflow UI once all roles are granted and DAG is uploaded.
 You now have a fully functional GCP pipeline:
 
 ```
-[GCS: readme.md]
+[GCS: input.md]
    ↓
 [Dataproc: wordcount.py]
    ↓
